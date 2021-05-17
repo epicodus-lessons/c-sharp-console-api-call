@@ -16,7 +16,7 @@ namespace ApiTest
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
 
       // Grabbing and saving the num_results property from the response object, while also grabbing and saving all nested objects defined in the Models/ directory: (1) the nested "results" key (corresponding to an array of Article objects) and within that (2) the nested "multimedia" key (corresponding to the array of Multimedia objects that belong to each Article object). 
-      // I came up with the name "MetaData" for the model, because I thought it fit best. Ultimately, you can name your classes whatever you like, however, the class property names need to match the names of the properties in the API response object.  
+      // I came up with the name "MetaData" for the model, because I thought it fit best. Ultimately, you can name your classes whatever you like, however, the C# class property names need to match the JSON key in the response object.  
       MetaData metaData = JsonConvert.DeserializeObject<MetaData>(jsonResponse.ToString()); 
 
       // displaying all of the Article and Multimedia objects from the API call
