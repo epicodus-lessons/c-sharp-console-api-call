@@ -37,7 +37,7 @@ namespace ApiTest
         }
         Console.WriteLine("______________________________________________________________________");
       } 
-      // listing this at the bottom, because it gets lost in the console output if you leave it at the top!
+      // Listing the num_results value at the bottom, because it gets lost in the console output if it is printed first!
       Console.WriteLine($"Num_results: {metaData.Num_Results}");
     }
   }
